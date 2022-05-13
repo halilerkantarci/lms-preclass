@@ -67,7 +67,10 @@ function xy() {
   console.log(q);
   const e = 2000;
   console.log(e);
+  const z = 3;
+  return z;
 }
+console.log(xy());
 xy();
 console.log(x);
 console.log(q);
