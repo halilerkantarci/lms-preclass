@@ -56,3 +56,25 @@
 
 // document.getElementById("demo").innerHTML =
 //   person["firstname"] + " is " + person["age"] + " years old.";
+
+//!JavaScript for...in Loop
+const person = {
+  fname: " John",
+  lname: " Doe",
+  age: 25,
+};
+
+for (let x in person) {
+  txt += person[x];
+}
+//!Adding New Properties
+person.nationality = "English";
+//!Deleting Properties
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
+
+delete person.age;
