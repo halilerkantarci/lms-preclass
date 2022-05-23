@@ -189,9 +189,67 @@ console.log(numbers2);
 // The filter() method creates a new array with array elements that passes a test.
 
 // This example creates a new array from elements with a value larger than 18:
-const numbers = [45, 4, 9, 16, 25];
-const over18 = numbers.filter(myFunction);
+const num = [45, 4, 9, 16, 25];
+const over18 = num.filter(myFunction2);
 
-function myFunction(value, index, array) {
+function myFunction2(value) {
   return value > 18;
 }
+console.log(over18);
+console.log(num);
+
+//! JavaScript Array reduce()
+// The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+// The reduce() method does not reduce the original array
+const num1 = [45, 4, 9, 16, 25];
+let sum = num1.reduce(myFunction3);
+
+function myFunction3(total, value) {
+  return total + value;
+}
+console.log(sum);
+console.log(num1);
+
+//The reduce() method can accept an initial value:
+let sum1 = num1.reduce(myFunction3, 300);
+console.log(sum1);
+
+//! JavaScript Array every()
+// The every() method check if all array values pass a test.
+// This example check if all array values are larger than 18:
+const num2 = [45, 4, 9, 16, 25];
+let allOver18 = num2.every(myFunction4);
+function myFunction4(value) {
+  return value > 18;
+}
+console.log(allOver18);
+
+//! JavaScript Array some()
+// The some() method check if some array values pass a test.
+// This example check if some array values are larger than 18:
+const num3 = [45, 4, 9, 16, 25];
+let someOver18 = num3.some(myFunction5);
+
+function myFunction5(value) {
+  return value > 18;
+}
+console.log(someOver18);
+
+//! JavaScript Array indexOf()
+const frts = ["Apple", "Orange", "Apple", "Mango"];
+let position = frts.indexOf("Apple") + 1;
+console.log(position);
+
+//! JavaScript Array lastIndexOf()
+let pstn = frts.lastIndexOf("Orange");
+console.log(pstn);
+
+//! JavaScript Array find()
+// This example finds (returns the value of) the first element that is larger than 18:
+const num4 = [4, 9, 16, 25, 29];
+let first = num4.find(myFunction6);
+
+function myFunction6(value) {
+  return value > 18;
+}
+console.log(first);
