@@ -12,36 +12,57 @@
     </div>
     <div>
       <ul class="" id="task-list">
-        <li>Görev 1</li>
-        <li>Görev 2</li>
-        <li>Görev 3</li>
+        <li class="task">Görev 1</li>
+        <li class="task">Görev 2</li>
+        <li class="task">Görev 3</li>
+      </ul>
+      <ul class="" id="task-list2">
+        <li class="task">Görev 1</li>
+        <li class="task">Görev 2</li>
+        <li class="task">Görev 3</li>
+      </ul>
+      <ul class="" id="task-list3">
+        <li class="task">Görev 1</li>
+        <li class="task">Görev 2</li>
+        <li class="task">Görev 3</li>
       </ul>
     </div>
     <script>
       let sonuc;
-      sonuc = document.getElementById("title");
+      sonuc = document.getElementsByClassName("task")[0];
       console.log(sonuc);
-      sonuc = document.getElementById("title").id;
+      sonuc = document.getElementsByClassName("task")[1];
       console.log(sonuc);
-      sonuc = document.getElementById("title").className;
-      console.log(sonuc);
-      sonuc = document.getElementById("title").classList;
-      console.log(sonuc);
-      document.getElementById("title").style.fontSize = "30px";
-      document.getElementById("title").style.color = "blue";
-      document.getElementById("title").style.fontWeight = "bold";
-      //   document.getElementById("title").style.display = "none";
-      document.getElementById("title").innerText = "TODO APP";
-      document.getElementById("title").innerHTML = "<p> TODO APP </p>";
-      sonuc = document.querySelector("#title");
-      sonuc = document.querySelector(".card-header");
-      console.log(sonuc);
-      sonuc = document.querySelector("div"); // ilk div elemanı bulur
-      console.log(sonuc);
-      sonuc = document.querySelector("li");
-      console.log(sonuc);
-      sonuc = document.querySelector("li:nth-child(odd)");
-      console.log(sonuc);
+
+      taskList = document.getElementsByClassName("task");
+      // for (let i = 0; i < taskList.length; i++) {
+      //   console.log(taskList[i]);
+      // }
+
+      for (let a of taskList) {
+        a.style.color = "red";
+        a.style.fontSize = "22px";
+        a.innerText = "Items";
+      }
+
+      taskList1 = document.getElementsByTagName("li"); // bütün li lere ulaş
+      for (let a of taskList1) {
+        a.style.color = "blue";
+        a.style.fontSize = "22px";
+      }
+      // diğer bir seçim yöntemi
+      liste1 = document.getElementById("task-list2");
+      taskList2 = liste1.getElementsByTagName("li");
+      for (let a of taskList2) {
+        a.style.color = "green";
+        a.style.fontSize = "32px";
+      }
+      taskList3 = document.querySelectorAll("#task-list3 li");
+      for (let a of taskList3) {
+        a.style.color = "violet";
+        a.style.fontSize = "22px";
+        a.innerText = "Items";
+      }
     </script>
   </body>
 </html>
