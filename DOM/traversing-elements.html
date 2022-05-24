@@ -29,7 +29,20 @@
     </div>
     <script>
       let sonuc;
+      ul = document.getElementById("task-list");
 
+      console.log(ul);
+      sonuc = ul.children;
+      console.log(sonuc);
+      sonuc = ul.children[0];
+      console.log(sonuc);
+      sonuc = ul.firstElementChild;
+      console.log(sonuc);
+      sonuc = ul.lastElementChild;
+      console.log(sonuc);
+      // ulaştığım elementin parentına ulaşabiliriz
+      sonuc = document.getElementById("title").parentElement;
+      console.log(sonuc);
     </script>
   </body>
 </html>

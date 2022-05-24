@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-CHANGE-BACKGROUND-GENERATOR</title>
+    <style>
+      #bg-generator {
+        height: 100vh;
+        text-align: center;
+        padding-top: 100px;
+      }
+      button {
+        border: 1px solid lightcoral;
+        border-radius: 5px;
+        color: white;
+        background-color: lightblue;
+        font-size: 15px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg-generator">
+      <button class="bgGenBtn">CHANGE BACKGROUND COLOR</button>
+    </div>
+
+    <script>
+      // hex renklerini rastgele seçmek istiyorum.
+      const hexList = [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+      ];
+      const button1 = document.getElementsByClassName("bgGenBtn")[0];
+      const div1 = document.getElementById("bg-generator");
+      //   button1.addEventListener("event",function)
+      button1.addEventListener("click", change);
+      function change() {
+        let hex = "#";
+        for (let i = 0; i < 6; i++) {
+          let rand = Math.floor(Math.random() * hexList.length); // 0.99 * 16 = 15 . yani random indeks üretirken 15 e kadar üretebilicem (0-15)
+          hex += hexList[rand];
+        }
+        div1.style.backgroundColor = hex;
+      }
+    </script>
+  </body>
+</html>
