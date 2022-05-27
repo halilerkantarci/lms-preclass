@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: blue;
+      }
+      .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      span {
+        display: none;
+        cursor: pointer;
+      }
+      i {
+        color: aliceblue;
+      }
+      li {
+        display: inline;
+        padding: 1rem;
+        list-style-type: none;
+      }
+      @media (max-width: 1000px) {
+        .nav {
+          flex-direction: column;
+        }
+        /* toggle dediğimiz için aslana tıkladığımızda bi ul.gorunur çalışıcak bi ul çalışıcak */
+        ul {
+          display: none;
+        }
+        ul.gorunur {
+          display: block;
+        }
+        span {
+          display: block;
+        }
+        .left {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="left">
+        <h1>LOGO</h1>
+        <span><i class="fa-solid fa-bars fa-2x"></i></span>
+      </div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">JS</a></li>
+      </ul>
+    </div>
+
+    <script>
+      let lion = document.querySelector("span");
+      let List = document.querySelector("ul");
+      lion.addEventListener("click", () => {
+        List.classList.toggle("gorunur");
+      });
+      // window.addEventListener("resize", () => {
+      //   if (window.innerWidth > 1000) {
+      //     List.classList.remove("gorunur");
+      //   }
+      // });
+      window.addEventListener("resize", () => {
+        window.innerWidth > 1000 && List.classList.remove("gorunur");
+      });
+    </script>
+  </body>
+</html>
