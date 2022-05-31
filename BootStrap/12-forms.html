@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section id="contact">
+      <div class="container-lg">
+        <div class="text-center">
+          <h2>Get In Touch</h2>
+          <p class="lead">
+            Question to ask? Fill out the form to contact me directly
+          </p>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <form>
+              <label for="email" class="form-label">Email address:</label>
+              <div class="input-group mb-">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-user"></i
+                ></span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="e.g.mario@example.com"
+                />
+              </div>
+
+              <label for="name" class="form-label my-2">Name:</label>
+              <div class="mb-4 input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Halil Erkantarci"
+                />
+                <span class="input-group-text">
+                  <i class="fa-solid fa-message"></i
+                ></span>
+              </div>
+
+              <label for="subject" class="form-label"
+                >What Is Your Question About?</label
+              >
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-question"></i
+                ></span>
+                <select class="form-select" id="subject">
+                  <option value="pricing" selected>Pricing query</option>
+                  <option value="content">Content query</option>
+                  <option value="other">Other query</option>
+                </select>
+              </div>
+
+              <div class="form-floating mt-2 mb-3">
+                <textarea
+                  name=""
+                  id="query"
+                  class="form-control"
+                  style="height: 140px"
+                ></textarea>
+                <label for="query" class="form-label">Your query...</label>
+              </div>
+              <div class="mb-4 text-center">
+                <button class="btn btn-primary">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
